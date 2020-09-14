@@ -1,3 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/77a0bb8e-9bca-4277-a42b-fbde7f41a7fd/deploy-status)](https://app.netlify.com/sites/ngrx-server-management/deploys)
+
+#Demo Link
+https://ngrx-server-management.netlify.app/
+
 # ServerManagement - Angular Ngrx Crud Example
 
 This project displays a simple list of servers that can be viewed, created, updated and deleted using http services ( using HttpClient) and @ngRx/store and @ngRx/effects state management libraries grouping information by modules. This ngRx is a Redux inspired library created for Angular to manage the state changes.
