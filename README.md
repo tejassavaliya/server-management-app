@@ -1,27 +1,44 @@
-# ServerManagement
+# ServerManagement - Angular Ngrx Crud Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+This project displays a simple list of servers that can be viewed, created, updated and deleted using http services ( using HttpClient) and @ngRx/store and @ngRx/effects state management libraries grouping information by modules. This ngRx is a Redux inspired library created for Angular to manage the state changes.
+
+#Getting Started
+To start using the application follow the next steps:
+
+## Get the Code
+```
+git clone https://github.com/tejassavaliya/server-management-app.git
+cd server-management-app
+npm install
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Functionalities
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to EDIT a server using Ngrx/store & Effects:
+1. To edit a server, the system **dispatch** an event with the action **"UPDATE_SERVER"**.
+2. The **reducer** related to the module **servers** is executed and the state is changed updating the information of specific server.
+3. An **“ngRx effect”** class is implemented (ServerEffects) by module and will be triggered when we dispatch actions with the store.
+4. Using some selectors defined in my **reducer** class, we can monitor the success of each action and exceute some specific code after that (like display a success message and/or come back to the home page).
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Running unit tests with code coverage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test --watch --code-coverage` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## To see code coverage After running above test command 
+```
+cd coverage/server-management
+open index.html file into the browser
+```
 
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
