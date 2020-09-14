@@ -1,0 +1,109 @@
+/*.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 5% 0 0 20%;
+}
+
+.item {
+  flex: 0 32%;
+  height: 300px;
+  background: lightblue;
+  margin-bottom: 2%; !* (100-32*3)/2 *!
+}*/
+.mainCont {
+  overflow: hidden;
+}
+.container{
+  overflow-y: auto;
+  height: calc(100vh - 75px);
+  margin-top: 1%;
+}
+.card-bg {
+  background: lightcoral;
+}
+.addNewBtn {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  bottom: 1%;
+  right: 5%;
+}
+.addNewBtn i.fa.fa-plus-circle {
+  font-size: 30px;
+  cursor: pointer;
+}
+.btn-status {
+  background-color: #1c87c9;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+@keyframes glowing {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+  50% {
+    background-color: #48c223;
+    box-shadow: 0 0 5px #48c223;
+  }
+  100% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+}
+@keyframes glowing-stopped {
+  /*0% {
+    background-color: #a10828;
+    box-shadow: 0 0 5px #a10828;
+  }
+  50% {
+    background-color: #f00641;
+    box-shadow: 0 0 10px #f00641;
+  }
+  100% {
+    background-color: #a10828;
+    box-shadow: 0 0 5px #a10828;
+  }*/
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 4px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+.btn-status.stopped {
+  animation: glowing-stopped 1300ms infinite;
+}
+.btn-status.running {
+  animation: glowing 1300ms infinite;
+}
+.action-button {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  color: #000;
+  font-weight: normal;
+  border: none;
+  background: #fefefe;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+}
+
+.action-button:hover {
+  background: #8d8180;
+  color:#fefefe;
+}
+
+.action-button:active {
+  background: #8d8180;
+  color:#fefefe;
+}

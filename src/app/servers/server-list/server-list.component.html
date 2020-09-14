@@ -1,0 +1,42 @@
+
+
+<div class="mainCont">
+
+  <button class="action-button" routerLink="/servers/create">
+    <i class="fa fa-plus"></i>
+  </button>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let server of servers | async">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h5 class="card-title">{{server.name}}</h5>
+          </div>
+          <!--<img class="card-img-top" src="data:image/png;base64,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" alt="Server image">-->
+          <div class="card-body text-secondary">
+
+            <p class="card-text">
+              <span>CPU</span>
+              {{server.cpu}}
+            </p>
+            <p class="card-text">
+              <span>Memory</span>
+              {{server.mem}}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="">
+                <button type="button" class="btn btn-sm btn-outline-primary" routerLink="/servers/edit/{{server.id}}" title="Edit"><i class="fa fa-pencil-square-o"></i> </button>
+                <button type="button" class="btn btn-sm btn-outline-danger ml-2" (click)="delete(server.id)" title="Delete"><i class="fa fa-trash-o"></i> </button>
+                <!--<button type="button" class="btn btn-sm btn-outline-secondary ml-2" title="View"><i class="fa fa-search"></i></button>-->
+              </div>
+              <span class="btn-status {{server.state}}" >{{server.state}}</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

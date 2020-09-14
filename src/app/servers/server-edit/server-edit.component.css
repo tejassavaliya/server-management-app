@@ -1,0 +1,76 @@
+.server-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.server-edit h1 {
+  display: inline;
+}
+
+.server-edit-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.server-edit-container {
+  padding: 1.5em 1.5em 1em 1.5em;
+  background: #fff;
+  border-radius: 0.1em;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+  0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.server-edit form {
+  margin-bottom: 1.5em;
+}
+
+.server-edit label {
+  font-weight: bold;
+  width: 5em;
+  display: inline-block;
+}
+
+.server-edit input {
+  width: 20em;
+  margin: 0 0 1em 1em;
+}
+
+.actor-list-spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+.crud-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.crud-buttons button {
+  margin: 0 0.5em;
+  width: 5em;
+}
+
+.crud-buttons-save {
+  border: none;
+  color: #444;
+}
+
+.crud-button-delete {
+  background: #dc3545;
+  border: #dc3545;
+  color: #fff;
+  font-weight: normal;
+}
+
+.crud-button-delete:hover {
+  background: #bb2534;
+}
+
+.crud-button-delete:active {
+  background: #a91c2a;
+}
+
+

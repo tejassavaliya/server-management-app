@@ -1,0 +1,40 @@
+<div class="server-edit">
+  <div class="server-edit-title">
+    <h1>Edit Server</h1>
+  </div>
+
+
+  <div class="server-edit-container" *ngIf="server">
+    <form [formGroup]="serverForm" >
+      <div class="form-group">
+        <label for="name">Server Name</label>
+        <input type="text" id="name" name="name" formControlName="name" required >
+      </div>
+
+      <div class="form-group">
+        <label for="cpu">CPU</label>
+        <input type="text" id="cpu" name="cpu"  formControlName="cpu" required >
+      </div>
+
+      <div class="form-group">
+        <label for="memory">Memory</label>
+        <input type="text" id="memory" name="memory" formControlName="mem" required >
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status"  formControlName="state" required>
+          <option value="stopped">Stopped</option>
+          <option value="running">Running</option>
+        </select>
+
+      </div>
+    </form>
+
+    <div class="crud-buttons">
+      <button class="crud-button-delete" *ngIf="server" (click)="deleteServer(server.id)">DELETE</button>
+      <button routerLink="/servers">CANCEL</button>
+      <button class="crud-buttons-save"  (click)="updateServer()">UPDATE</button>
+    </div>
+  </div>
+</div>
