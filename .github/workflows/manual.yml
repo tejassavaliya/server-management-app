@@ -43,16 +43,5 @@ jobs:
       - run: npm run test
       - run: make test-coverage
       - run: npm run build
-      - name: codecov
-          run: npx codecov
-          env:
-            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-    finish:
-      needs: test
-      runs-on: ubuntu-latest
-      steps:
-        - name: Coveralls Finished
-          uses: coverallsapp/github-action@master
-          with:
-            github-token: ${{ secrets.github_token }}
-            parallel-finished: true
+        env:
+          CI: true
