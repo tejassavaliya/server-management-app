@@ -41,7 +41,6 @@ jobs:
           echo test, code coverage and deploy your project.
       - run: npm install
       - run: npm run test
-      - run: make test-coverage
       - run: npm run build
         env:
           CI: true
