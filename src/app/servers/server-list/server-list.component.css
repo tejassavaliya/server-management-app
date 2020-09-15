@@ -46,6 +46,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
+  z-index: 1;
 }
 @keyframes glowing {
   0% {

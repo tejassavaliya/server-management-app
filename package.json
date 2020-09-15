@@ -23,8 +23,8 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"json-server --watch db.json\" ",
-    "build": "ng build",
-    "test": "ng test",
+    "build": "ng build --prod",
+    "test": "ng test --watch=true --browsers=ChromeHeadlessPuppeteer --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -48,6 +48,7 @@
     "font-awesome": "^4.7.0",
     "jasmine-marbles": "^0.6.0",
     "json-server": "^0.16.1",
+    "puppeteer": "^5.3.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "uuid": "^8.3.0",
