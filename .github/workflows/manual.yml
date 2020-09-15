@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 12.x
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -37,5 +37,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm run test
+      - name: codecov
+        run: npx codecov
         env:
-          CI: true
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
