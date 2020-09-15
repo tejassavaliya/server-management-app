@@ -1,3 +1,5 @@
+![CI-Workflow](https://github.com/tejassavaliya/server-management-app/workflows/CI-Workflow/badge.svg)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/77a0bb8e-9bca-4277-a42b-fbde7f41a7fd/deploy-status)](https://app.netlify.com/sites/ngrx-server-management/deploys)
 
 # Demo Link
