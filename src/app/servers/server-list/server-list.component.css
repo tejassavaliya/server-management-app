@@ -96,6 +96,7 @@
   font-weight: normal;
   border: none;
   background: #fefefe;
+  z-index: 9;
   box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
 

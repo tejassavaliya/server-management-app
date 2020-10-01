@@ -11,7 +11,8 @@ import {RouterModule} from '@angular/router';
 import {Store, StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {ServersService} from '../shared/servers.service';
-
+import * as serverActions from '../store/servers.actions';
+import {AppState} from '../../app.state';
 
 describe('ServerListComponent', () => {
   let component: ServerListComponent;
@@ -25,7 +26,7 @@ describe('ServerListComponent', () => {
         state: 'stopped',
         cpu: '7 GHz',
         name: 'My Server 1'
-      },{
+      }, {
         id: 2,
         mem: '2 GB',
         state: 'stopped',
@@ -72,5 +73,19 @@ describe('ServerListComponent', () => {
   });
   it(`should have the title 'List of Servers'`, () => {
     expect(component.title).toEqual('List of Servers');
+  });
+
+  it('should dispatch delete action', () => {
+    const dispatchSpy = spyOn(mockStore, 'dispatch');
+    // expect(dispatchSpy).toHaveBeenCalledTimes(1);
+    // const expectedAction = new serverActions.RemoveServer(1);
+    // const store = jasmine.createSpyObj<Store<AppState>>('store', ['dispatch']);
+
+    fixture = TestBed.createComponent(ServerListComponent);
+    component = fixture.componentInstance;
+    component.delete(1);
+    expect(dispatchSpy).toHaveBeenCalledWith(
+      new serverActions.RemoveServer(1)
+    );
   });
 });

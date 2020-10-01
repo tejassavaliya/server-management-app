@@ -1,4 +1,4 @@
-import {async, TestBed, inject, getTestBed} from '@angular/core/testing';
+import {async, TestBed, inject, getTestBed, waitForAsync} from '@angular/core/testing';
 
 import {ServersService} from './servers.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -45,7 +45,7 @@ describe('ServersService', () => {
     expect(svg).toBeTruthy();
   }));
 
-  it('should get list of all servers', async(() => {
+  it('should get list of all servers', waitForAsync(() => {
     service
       .findAll()
       .subscribe((data: Server[]) => {

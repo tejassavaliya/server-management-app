@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import {BrowserModule} from '@angular/platform-browser';
@@ -10,6 +10,10 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 
 describe('AppComponent', () => {
+    let component: AppComponent;
+    let fixture: ComponentFixture<AppComponent>;
+
+  // configuring dependencies
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -32,16 +36,23 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+    // getting component
+    beforeEach(() => {
+      fixture = TestBed.createComponent(AppComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    });
 
-  it(`should have as title 'server-management'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('server-management');
-  });
+    it('should create the app', () => {
+      // const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.componentInstance;
+      expect(app).toBeTruthy();
+    });
+
+    it(`should have as title 'server-management'`, () => {
+      // const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.componentInstance;
+      expect(app.title).toEqual('server-management');
+    });
 
 });
